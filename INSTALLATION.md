@@ -8,6 +8,6 @@ pip install -r <path-to-this-directory>/requirements.txt
 ```python
 from <path-to-this-directory> import <your-validator-name>
 # e.g.
-from custom_validators import RegexMatch
+from regex-validator import RegexMatch
 ```
 
