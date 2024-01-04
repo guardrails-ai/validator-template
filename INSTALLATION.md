@@ -4,12 +4,12 @@
 ```bash
 pip install -r <path-to-this-directory>/requirements.txt
 # e.g
-pip install -r regex_validator/requirements.txt
+pip install -r test_validator/requirements.txt
 ```
 - Wherever you're using the validator, add the following import statement:
 ```python
 from <path-to-this-directory> import <your-validator-name>
 # e.g.
-from regex_validator import RegexMatch
+from test_validator import RegexMatch
 ```
 
