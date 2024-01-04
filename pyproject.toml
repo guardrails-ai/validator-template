@@ -2,7 +2,9 @@
 name = "test_validator"
 version = "0.0.0"
 description = "Template repo for Guardrails Hub validators."
-authors = ["Guardrails AI <contact@guardrailsai.com>"]
+authors = [
+    {name = "Guardrails AI", email = "contact@guardrailsai.com"}
+]
 license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">= 3.8"
