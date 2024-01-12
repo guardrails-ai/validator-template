@@ -13,7 +13,7 @@ from guardrails.validator_base import (
 )
 
 
-@register_validator(name="regex_match", data_type="string")
+@register_validator(name="guardrails/regex_match", data_type="string")
 class RegexMatch(Validator):
     """Validates that a value matches a regular expression.
 
