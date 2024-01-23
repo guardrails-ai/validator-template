@@ -1,7 +1,7 @@
 # Guardrails Validator Template
 Template repository that hosts a sample validator to be used within GuardrailsHub.
 
-# How to create a Guardrails Validator
+## How to create a Guardrails Validator
 - On the top right of the page, click "Use this template", select "create a new repository"  and set a name for the package.
 - Modify the class in [validator/main.py](validator/main.py) with source code for the new validator
     - Make sure that the class still inherits from `Validator` and has the `register_validator` annotation.
@@ -11,14 +11,14 @@ Template repository that hosts a sample validator to be used within GuardrailsHu
 
 * Note: This package uses a pyproject.toml file, on first run, run `pip install .` to pull down and install all dependencies
 
-# Testing and using your validator
+### Testing and using your validator
 - Open [test/test-validator.py](test/test-validator.py) to test your new validator 
 - Import your new validator and modify `ValidatorTestObject` accordingly
 - Modify the TEST_OUTPUT to an object that will pass your validator's test
 - Run `python test/test-validator.py` via terminal, make sure the returned output reflects the input object 
 - Write advanced tests for failures, etc.
 
-# Upload your validator to the validator hub
+## Upload your validator to the validator hub
 - Update the [pyproject.toml](pyproject.toml) file and make necessary changes as follows:
     - Update the `name` field to the name of your validator
     - Update the `description` field to a short description of your validator
