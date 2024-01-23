@@ -14,7 +14,7 @@ Template repository that hosts a sample validator to be used within GuardrailsHu
 ### Testing and using your validator
 - Open [test/test-validator.py](test/test-validator.py) to test your new validator 
 - Import your new validator and modify `ValidatorTestObject` accordingly
-- Modify the TEST_OUTPUT to an object that will pass your validator's test
+- Modify the TEST_OUTPUT and TEST_FAIL_OUTPUT accordingly
 - Run `python test/test-validator.py` via terminal, make sure the returned output reflects the input object 
 - Write advanced tests for failures, etc.
 
@@ -28,3 +28,4 @@ Template repository that hosts a sample validator to be used within GuardrailsHu
 - You can add additional files to the [validator](validator) directory, but don't rename any existing files/directories.
     - e.g. Add any environment variables (without the values, just the keys) to the [.env](.env) file.
 - Ensure that there are no other dependencies or any additional steps required to run your validator.
+- Fill out this [form](https://forms.gle/nmxyKwzjypaqvWxbA) to get your new validator onboarded!
