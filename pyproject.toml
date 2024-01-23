@@ -10,5 +10,6 @@ readme = "README.md"
 requires-python = ">= 3.8"
 dependencies = [
     "rstr",
-    "guardrails-ai>=0.3.2"
+    "guardrails-ai>=0.3.2",
+    "pydantic>=2.4.2"
 ]
