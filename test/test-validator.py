@@ -8,7 +8,7 @@ guard = Guard.from_string(validators=[RegexMatch(regex="a.*", match_type="fullma
 
 def test_pass():
   test_output = "a test value"
-  raw_output, guarded_output, *rest = guard.parse(TEST_OUTPUT)
+  raw_output, guarded_output, *rest = guard.parse(test_output)
   assert(guarded_output is test_output)
 
 def test_fail():
