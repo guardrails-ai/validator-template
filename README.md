@@ -1,5 +1,4 @@
 # Guardrails Validator Template
-Template repository that hosts a sample validator to be used within GuardrailsHub.
 
 ## How to create a Guardrails Validator
 - On the top right of the page, click "Use this template", select "create a new repository"  and set a name for the package.
@@ -28,4 +27,3 @@ Template repository that hosts a sample validator to be used within GuardrailsHu
 - You can add additional files to the [validator](validator) directory, but don't rename any existing files/directories.
     - e.g. Add any environment variables (without the values, just the keys) to the [.env](.env) file.
 - Ensure that there are no other dependencies or any additional steps required to run your validator.
-- Fill out this [form](https://forms.gle/nmxyKwzjypaqvWxbA) to get your new validator onboarded!
