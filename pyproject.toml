@@ -10,7 +10,22 @@ readme = "README.md"
 requires-python = ">= 3.8"
 dependencies = [
     "rstr",
-    "guardrails-ai>=0.3.2",
-    "pydantic>=2.4.2",
-    "pytest"
+    "guardrails-ai>=0.3.2"
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pyright",
+    "pytest",
+    "ruff"
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-rP"
+testpaths = [
+    "test"
+]
+
+[tool.pyright]
+include = ["validator"]
