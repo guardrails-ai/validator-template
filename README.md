@@ -5,9 +5,10 @@
 - Clone down the new repository.
 - Modify the class in [validator/main.py](validator/main.py) with source code for the new validator
     - Make sure that the class still inherits from `Validator` and has the `register_validator` annotation.
-    - Set the `name` in the `register_validator` to the name of the repo and set the appropriate data type.
-- Change [validator/__init__.py](validator/__init__.py) to your new Validator classname instead of RegexMatch
-- Locally test the validator with the test instructions below
+    - Set the `name` in the `register_validator` to the name of the repo prefixed with your org as a namespace and set the appropriate data type.
+- Change [validator/__init__.py](validator/__init__.py) to your new Validator classname instead of ValidatorTemplate
+- Perform a self install with `make dev` or `pip install -e ".[dev]"`
+- Locally test the validator with the [test instructions below](#testing-and-using-your-validator)
 - Update this README to follow the Validator Card format; you can find an example [here](https://github.com/guardrails-ai/lowercase/blob/main/README.md)
 
 * Note: This package uses a pyproject.toml file, on first run, run `make dev` to pull down and install all dependencies
