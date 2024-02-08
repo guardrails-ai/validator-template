@@ -1,14 +1,22 @@
 # Guardrails Validator Template
 
 ## How to create a Guardrails Validator
-- On the top right of the page, click "Use this template", select "create a new repository"  and set a name for the package.
+- On the top right of the page, click "Use this template", select "create a new repository"  and set a name for the package.  See [Naming Conventions](#naming-conventions) below.
+- Clone down the new repository.
 - Modify the class in [validator/main.py](validator/main.py) with source code for the new validator
     - Make sure that the class still inherits from `Validator` and has the `register_validator` annotation.
     - Set the `name` in the `register_validator` to the name of the repo and set the appropriate data type.
 - Change [validator/__init__.py](validator/__init__.py) to your new Validator classname instead of RegexMatch
 - Locally test the validator with the test instructions below
+- Update this README to follow the Validator Card format; you can find an example [here](https://github.com/guardrails-ai/lowercase/blob/main/README.md)
 
-* Note: This package uses a pyproject.toml file, on first run, run `pip install .` to pull down and install all dependencies
+* Note: This package uses a pyproject.toml file, on first run, run `make dev` to pull down and install all dependencies
+
+### Naming Conventions
+1. Avoid using `is` and `bug`
+2. Use snake_case: i.e. `_` to separate words. e.g. valid_address
+3. For the description of the repo, write one sentence that says what the validator does; should be the same as the description in the pydoc string.
+4. When annotating the class use the `{namespace}/{validator_name}` pattern: e.g. `@register_validator(name=“guardrails/valid_address”)`
 
 ### Testing and using your validator
 - Open [test/test-validator.py](test/test-validator.py) to test your new validator 

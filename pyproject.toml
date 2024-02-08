@@ -9,7 +9,6 @@ license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">= 3.8"
 dependencies = [
-    "rstr",
     "guardrails-ai>=0.3.2"
 ]
 
@@ -24,7 +23,7 @@ dev = [
 minversion = "6.0"
 addopts = "-rP"
 testpaths = [
-    "test"
+    "tests"
 ]
 
 [tool.pyright]
