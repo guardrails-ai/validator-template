@@ -26,6 +26,7 @@ class ValidatorTemplate(Validator):
         arg_2 (string): {Description of the argument here}
     """  # noqa
 
+    # If you don't have any init args, you can omit the __init__ method.
     def __init__(
         self,
         arg_1: str,
