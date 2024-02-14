@@ -37,7 +37,7 @@ class ValidatorTemplate(Validator):
         self._arg_1 = arg_1
         self._arg_2 = arg_2
 
-    def validate(self, value: Any, metadata: Dict) -> ValidationResult:
+    def validate(self, value: Any, metadata: Dict = {}) -> ValidationResult:
         """Validates that {fill in how you validator interacts with the passed value}."""
         # Add your custom validator logic here and return a PassResult or FailResult accordingly.
         if value != "pass": # FIXME
