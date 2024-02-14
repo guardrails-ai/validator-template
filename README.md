@@ -52,7 +52,7 @@ In this example, we apply the validator to a string field of a JSON output gener
 
 ```python
 # Import Guard and Validator
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from guardrails.hub import ValidatorTemplate
 from guardrails import Guard
 
