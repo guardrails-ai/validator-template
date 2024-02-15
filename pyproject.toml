@@ -1,5 +1,5 @@
 [project]
-name = "regexmatch"
+name = "validator-template"
 version = "0.0.0"
 description = "Template repo for Guardrails Hub validators."
 authors = [
@@ -9,7 +9,6 @@ license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">= 3.8"
 dependencies = [
-    "rstr",
     "guardrails-ai>=0.3.2"
 ]
 
@@ -18,13 +17,13 @@ dev = [
     "pyright",
     "pytest",
     "ruff"
-]
+] 
 
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "-rP"
 testpaths = [
-    "test"
+    "tests"
 ]
 
 [tool.pyright]
