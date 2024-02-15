@@ -38,7 +38,7 @@ from guardrails.hub import ValidatorTemplate
 from guardrails import Guard
 
 # Setup Guard
-guard = Guard.use(
+guard = Guard().use(
     ValidatorTemplate
 )
 
