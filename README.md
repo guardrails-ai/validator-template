@@ -70,8 +70,8 @@ guard = Guard.from_pydantic(output_class=Process)
 # Run LLM output generating JSON through guard
 guard.parse("""
 {
-		"process_name": "templating",
-		"status": "pass"
+	"process_name": "templating",
+	"status": "pass"
 }
 """)
 ```
