@@ -89,7 +89,7 @@ Initializes a new instance of the ValidatorTemplate class.
 </ul>
 <br/>
 
-**`validate(self, value, metadata) → ValidationResult`**
+**`validate(self, value, metadata) -> ValidationResult`**
 <ul>
 Validates the given `value` using the rules defined in this validator, relying on the `metadata` provided to customize the validation process. This method is automatically invoked by `guard.parse(...)`, ensuring the validation logic is applied to the input data.
 
@@ -99,11 +99,11 @@ Note:
 2. When invoking `guard.parse(...)`, ensure to pass the appropriate `metadata` dictionary that includes keys and values required by this validator. If `guard` is associated with multiple validators, combine all necessary metadata into a single dictionary.
 
 **Parameters**
-- **`value`** *(Any):* The input value to validate.
-- **`metadata`** *(dict):* A dictionary containing metadata required for validation. Keys and values must match the expectations of this validator.
+- **`value`** *(Any)*: The input value to validate.
+- **`metadata`** *(dict)*: A dictionary containing metadata required for validation. Keys and values must match the expectations of this validator.
     
     
     | Key | Type | Description | Default |
     | --- | --- | --- | --- |
-    | key1 | String | Description of key1's role. | N/A |
+    | `key1` | String | Description of key1's role. | N/A |
 </ul>
