@@ -13,4 +13,4 @@ type:
 qa:
 	make lint
 	make type
-	make tests
+	make test
