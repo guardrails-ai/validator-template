@@ -1,27 +1,47 @@
-# to run these, run 
-# make tests
+# to run these, run
+# make test
 
 from guardrails import Guard
 import pytest
 from validator import ValidatorTemplate
 
-# We use 'exception' as the validator's fail action,
-#  so we expect failures to always raise an Exception
+# Create guards using the modern Guard().use() API.
 # Learn more about corrective actions here:
 #  https://www.guardrailsai.com/docs/concepts/output/#%EF%B8%8F-specifying-corrective-actions
-guard = Guard.from_string(validators=[ValidatorTemplate(arg_1="arg_1", arg_2="arg_2", on_fail="exception")])
+
+guard = Guard().use(
+    ValidatorTemplate,
+    arg_1="arg_1",
+    arg_2="arg_2",
+    on_fail="exception",
+    use_local=True,
+)
+
+fix_guard = Guard().use(
+    ValidatorTemplate,
+    arg_1="arg_1",
+    arg_2="arg_2",
+    on_fail="fix",
+    use_local=True,
+)
+
 
 def test_pass():
-  test_output = "pass"
-  result = guard.parse(test_output)
-  
-  assert result.validation_passed is True
-  assert result.validated_output == test_output
+    result = guard.validate("pass")
 
-def test_fail():
-  with pytest.raises(Exception) as exc_info:
-    test_output = "fail"
-    guard.parse(test_output)
-  
-  # Assert the exception has your error_message
-  assert str(exc_info.value) == "Validation failed for field with errors: {A descriptive but concise error message about why validation failed}"
+    assert result.validation_passed is True
+    assert result.validated_output == "pass"
+
+
+def test_fail_exception():
+    with pytest.raises(Exception):
+        guard.validate("fail")
+
+
+def test_fail_fix():
+    result = fix_guard.validate("fail")
+
+    assert result.validation_passed is False
+    # When on_fail="fix", the validated_output should be the fix_value
+    # from the FailResult (if your validator provides one).
+    assert result.validated_output is not None

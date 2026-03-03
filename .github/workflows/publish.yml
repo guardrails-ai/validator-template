@@ -1,0 +1,20 @@
+# Publishes the validator to the Guardrails Hub.
+# Triggered by pushing a version tag (e.g. v0.1.0) or manually via workflow_dispatch.
+name: Publish to Guardrails Hub
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Publish
+        uses: guardrails-ai/guardrails/.github/actions/validator_pypi_publish@main
+        with:
+          guardrails_token: ${{ secrets.GR_GUARDRAILS_TOKEN }}
+          validator_id: guardrails/validator_template  # FIXME: replace with your validator id

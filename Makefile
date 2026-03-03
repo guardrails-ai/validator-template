@@ -1,3 +1,5 @@
+.PHONY: dev lint test type qa
+
 dev:
 	pip install -e ".[dev]"
 
@@ -5,7 +7,7 @@ lint:
 	ruff check .
 
 test:
-	pytest ./tests
+	pytest -v tests
 
 type:
 	pyright validator
